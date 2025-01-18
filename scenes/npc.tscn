@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://kui8aiirw1kh"]
+
+[ext_resource type="Texture2D" uid="uid://2ami0271oe2v" path="res://assets/images/soldier1_gun.png" id="1_6aflq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8jve"]
+radius = 14.0
+height = 40.0
+
+[node name="NPC" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6aflq")
+offset = Vector2(10, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_t8jve")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1.0
+offset_top = -46.0
+offset_right = 39.0
+offset_bottom = -23.0
+scale = Vector2(0.790612, 0.705453)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "label"
+
+[node name="NavAgent" type="NavigationAgent2D" parent="."]
